@@ -1,6 +1,6 @@
 ---
 categories: [Cuda]
-tags: 
+tags: GDS CUDA
 ---
 
 ### 1. 介绍 
@@ -37,12 +37,11 @@ tags:
 **清理资源**: 在完成所有I/O操作后，依次调用cuFileBufDeregister释放缓冲区，cuFileHandleDeregister注销文件句柄，并最终调用cuFileDriverClose关闭驱动程序会话。
 
 ### 4. 示例代码
-    
-```
+{% highlight c++ %} 
 #define MAX_BUFFER_SIZE (4 * 1024 * 1024) 
 
 int main() {
-    int fd = -1;
+    int fd  = -1;
     ssize_t ret = -1;
     void *writePtr = NULL, *readPtr = NULL; // 分别用于写入和读取的设备指针
     const size_t size = MAX_BUFFER_SIZE;
@@ -50,6 +49,9 @@ int main() {
     const char *TESTFILE = "/path/test.file"; 
     CUfileDescr_t cf_descr;
     CUfileHandle_t cf_handle;
+    int device_id = 0;
+
+    assert(cudaSetDevice(device_id) == cudaSuccess);
 
     // 初始化CUDA驱动
     status = cuFileDriverOpen();
@@ -153,4 +155,4 @@ cleanup:
 
     return (ret == size) ? 0 : -1;
 }
-```
+{% endhighlight %}

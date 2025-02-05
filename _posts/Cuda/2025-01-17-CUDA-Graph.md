@@ -1,4 +1,5 @@
 ---
+title: CUDA Graph
 categories: [Cuda]
 tags: CUDA Graph pytorch SGLang
 ---

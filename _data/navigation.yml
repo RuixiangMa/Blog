@@ -49,3 +49,6 @@ header:
       zh-TW: *ZH_HANT
       zh-HK: *ZH_HANT
     url: about/
+
+  - titles:     GitHub
+    url:        https://github.com/RuixiangMa

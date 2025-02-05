@@ -1,6 +1,8 @@
 ---
-
+categories: [Cuda]
+tags: 
 ---
+
 ### 1. 介绍 
 **cuFile** API 是 NVIDIA 为支持 GPUDirect Storage (GDS) 而提供的接口集，它是 CUDA Driver C API 的一部分。
 

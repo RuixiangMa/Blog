@@ -1,5 +1,5 @@
 ---
-title: IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse
+title: IndexCache-Accelerating Sparse Attention via Cross-Layer Index Reuse
 categories: [Paper]
 tags: Sparse Reuse  LLM Inference Optimization
 ---
